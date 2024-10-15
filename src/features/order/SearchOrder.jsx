@@ -18,8 +18,11 @@ function SearchOrder() {
         placeholder="search order num #"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
+        className="w-28 rounded-full bg-yellow-100 px-4 py-2 text-sm transition-all duration-300 placeholder:text-stone-400 focus:outline-none focus:ring focus:ring-yellow-500 focus:ring-opacity-50 sm:w-48 sm:focus:w-64"
       />
-      <button type="submit">Search</button>
+      <button type="submit" className="mx-2 hidden sm:inline-block">
+        Search
+      </button>
     </form>
   );
 }
