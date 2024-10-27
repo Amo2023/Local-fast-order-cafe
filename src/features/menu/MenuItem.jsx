@@ -7,19 +7,19 @@ function MenuItem({ pizza }) {
   const dispatch = useDispatch();
   const { id, name, unitPrice, ingredients, soldOut, imageUrl } = pizza;
 
-  function handleAddToCart(e) {
-    // e.preventDefault()
+  function handleAddToCart() {
+
     const newItem = {
-      cart: [
-        {
+      // cart: [
+        // {
           pizzaId: id,
           name,
           quantity: 1,
           unitPrice,
           totalPrice: unitPrice * 1,
-        },
-      ],
-    };
+        }
+    //   // ],
+    // };
     dispatch(addItem(newItem));
   }
 
@@ -47,7 +47,7 @@ function MenuItem({ pizza }) {
             </p>
           )}
           {!soldOut && (
-            <Button type="small" onClick={handleAddToCart()}>
+            <Button type="small" onClick={handleAddToCart}>
               Add to cart
             </Button>
           )}

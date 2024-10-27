@@ -11,11 +11,11 @@ function CreateUser() {
 
   function handleSubmit(e) {
     e.preventDefault();
-console.log("e")
+
     if (!username) return;
 
     dispatch(updateName(username));
-    console.log("??")
+
     navigate("/menu");
   }
 
