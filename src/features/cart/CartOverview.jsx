@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import LinkButton from "../../ui/LinkButton";
 import { useSelector } from "react-redux";
 import { getTotalCartPrice, getTotalCartQuantity } from "./cartSlice";

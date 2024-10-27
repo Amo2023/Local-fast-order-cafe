@@ -26,7 +26,9 @@ const cartSlice = createSlice({
       state.cart = state.cart.filter((item) => item.pizzaId !== action.payload);
     },
     increaseItemQuantity(state, action) {
+      console.log("dfadfads")
       const item = state.cart.find((item) => item.pizzaId === action.payload);
+
       item.quantity++;
       item.totalPrice = item.quantity * item.unitPrice;
     },
@@ -34,6 +36,9 @@ const cartSlice = createSlice({
       const item = state.cart.find((item) => item.pizzaId === action.payload);
       item.quantity--;
       item.totalPrice = item.quantity * item.unitPrice;
+
+      //To prevent quantity goes below zero, automatically delete Item
+      if(item.quantity===0) cartSlice.caseReducers.deleteItem(state,action) 
     },
     clearCart(state, action) {
       state.cart = [];
