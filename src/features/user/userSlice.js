@@ -20,6 +20,7 @@ export default userSlice.reducer;
 
 export const getUsername=state=>state.user.username
 
+//TODO: implement it later
 // function getPosition() {
 //   return new Promise(function (resolve, reject) {
 //     navigator.geolocation.getCurrentPosition(resolve, reject);
